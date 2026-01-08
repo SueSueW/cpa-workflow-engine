@@ -1,0 +1,74 @@
+You are building a private CPA exam workflow app.
+
+The app uses a fixed JSON file as its ONLY data source.
+Do NOT modify the JSON structure.
+
+========================
+CORE PURPOSE
+========================
+
+This app helps me:
+- decide what kind of question this is
+- apply ONE simple exam rule
+- quickly return to source questions if needed
+
+This is NOT:
+- a learning app
+- a teaching app
+- a question bank
+
+========================
+RULE DISPLAY
+========================
+
+For each rule, display:
+
+1️⃣ Anchor
+- Large text
+- One sentence only
+- No explanation
+
+2️⃣ Triggers
+- Shown as short keywords
+- Used to help me read questions faster
+
+3️⃣ Source Questions
+- Read the `source` field
+- Split by comma if multiple
+- Display each question ID as:
+  - clickable
+  - copyable with one tap
+
+Purpose:
+- I paste these IDs back into UWorld
+- I re-practice this exact decision pattern
+
+========================
+NAVIGATION LOGIC
+========================
+
+- User selects Exam → Domain → Subdomain
+- Rules are shown as a flat list
+- No forced order
+- User can jump freely
+
+========================
+DESIGN PRINCIPLES
+========================
+
+- Minimal UI
+- No animations required
+- Designed for tired users
+- Must work in 10–30 seconds
+
+========================
+IMPORTANT CONSTRAINTS
+========================
+
+- Do NOT merge rules in the app
+- Do NOT infer relationships
+- If two rules look similar, show both
+- JSON is the source of truth
+
+
+
