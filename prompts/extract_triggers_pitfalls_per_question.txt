@@ -1,0 +1,83 @@
+You will receive my previous answers to AUD questions.
+Each answer corresponds to ONE question.
+
+Your task is STRICTLY PER QUESTION.
+Do NOT merge questions.
+Do NOT generalize.
+Do NOT summarize across questions.
+
+========================
+WHAT YOU MUST DO
+========================
+
+For EACH question separately:
+
+1️⃣ Extract TRIGGERS
+Trigger words are:
+- words or short phrases that appeared in the question or answers
+- words that helped me decide the category or eliminate options
+- keywords I should notice again next time
+
+Rules for triggers:
+- Use words already present in the text
+- Very short (1–3 words each)
+- 3–6 triggers is enough
+- If unsure, include fewer, not more
+
+
+2️⃣ Extract PITFALLS
+Pitfalls are:
+- specific ways THIS question tried to mislead me
+- traps that were explicitly described or implied in the explanation
+
+Rules for pitfalls:
+- Only include pitfalls clearly mentioned in THIS question’s explanation
+- Do NOT invent new traps
+- Do NOT generalize
+
+If this question has no clear pitfall, write:
+- No clear pitfall in this question
+
+
+========================
+STRICT CONSTRAINTS
+========================
+
+- Do NOT re-analyze the question
+- Do NOT teach
+- Do NOT explain standards
+- Do NOT compare with other questions
+- Do NOT merge similar ideas
+- Treat each question as isolated
+
+
+========================
+OUTPUT FORMAT (REPEAT FOR EACH QUESTION)
+========================
+
+Question ID: <if provided, otherwise keep order>
+
+Rule (copy exactly from text):
+<the rule sentence already written>
+
+Triggers:
+- trigger 1
+- trigger 2
+- trigger 3
+
+Pitfalls:
+- pitfall 1
+- pitfall 2
+OR:
+- No clear pitfall in this question
+
+
+========================
+FINAL CHECK
+========================
+
+- One question = one output block
+- Repetition is allowed
+- Granularity is more important than elegance
+
+
