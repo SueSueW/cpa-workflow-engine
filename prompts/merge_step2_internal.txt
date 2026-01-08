@@ -1,0 +1,73 @@
+This instruction applies ONLY after the user has approved the merge plan.
+
+You are now in STEP 2 — FINAL MERGE.
+
+========================
+MERGE SCOPE
+========================
+
+- Only merge rows explicitly approved in Step 1
+- Do NOT merge any additional rows
+- Do NOT revisit merge decisions
+
+========================
+MERGE RULES
+========================
+
+For each approved merge group:
+
+1️⃣ rule_draft_10yo
+- Choose the clearest version
+- Do NOT rewrite meaning
+- Minor wording cleanup only if explicitly allowed
+
+2️⃣ source
+- Combine ALL question_id values
+- Preserve original order if possible
+- Do NOT drop any IDs
+
+3️⃣ triggers
+- Union all triggers
+- Remove exact duplicates only
+
+4️⃣ pitfalls
+- Union all pitfalls
+- Remove exact duplicates only
+
+5️⃣ status
+- Set merged rule status = stable
+
+========================
+NON-MERGED ROWS
+========================
+
+- Keep as-is
+- Preserve original status
+- Do NOT modify content
+
+========================
+OUTPUT REQUIREMENTS
+========================
+
+- Generate a NEW table
+- Include all required fields:
+  examId
+  domainId
+  subdomainId
+  rule_draft_10yo
+  triggers
+  pitfalls
+  source
+  status
+
+- Do NOT overwrite original data
+
+========================
+FINAL VALIDATION
+========================
+
+- Input row count = merged rows + non-merged rows
+- All question_ids are preserved
+- No cross-subdomain merges
+
+

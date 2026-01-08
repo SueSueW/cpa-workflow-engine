@@ -1,0 +1,47 @@
+You will receive rows from my Excel sheet.
+Each row represents ONE question-level rule.
+
+You MUST use a TWO-STEP SUBMISSION PROCESS.
+
+========================
+STEP 1 — MERGE PLAN ONLY
+========================
+
+Do NOT generate final merged data in Step 1.
+
+Your task in Step 1:
+Propose a merge plan for my review.
+
+Rules:
+- Only consider rows with status = stable
+- Only consider rows within the SAME subdomainId
+- Do NOT force merges
+- If unsure, keep separate
+
+For Step 1, output ONLY:
+
+1️⃣ Input summary
+- Total input rows
+- SubdomainId involved
+
+2️⃣ Proposed merge groups
+For each group:
+- Row numbers
+- Question IDs
+- Anchor preview (short)
+- Reason for merge (one line)
+
+3️⃣ Explicitly list rows NOT merged
+- With brief reason
+
+========================
+WAIT FOR CONFIRMATION
+========================
+
+After Step 1, STOP.
+Wait for my explicit approval.
+
+Only proceed to Step 2 if I say:
+“OK, generate final merged output.”
+
+
