@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "app": "Workflow CPA",
+    "schemaVersion": "1.1",
+    "lastUpdated": "2026-01-25",
+    "owner": "private",
+    "notes": "Exam-aware final schema. Do not change structure."
+  },
+
+  "exams": [
+    {
+      "id": "AUD",
+      "name": "Auditing and Attestation",
+      "status": "active"
+    }
+  ],
+
+  "domains": [
+    {
+      "id": "A",
+      "examId": "AUD",
+      "name": "Ethics & Professional Responsibilities",
+      "description": "Ethics, independence, professional judgment"
+    },
+    {
+      "id": "B",
+      "examId": "AUD",
+      "name": "Assessing Risk and Planning",
+      "description": "Risk assessment, planning, internal control"
+    },
+    {
+      "id": "C",
+      "examId": "AUD",
+      "name": "Performing Further Procedures and Obtaining Evidence",
+      "description": "Audit procedures, evidence, sampling"
+    },
+    {
+      "id": "D",
+      "examId": "AUD",
+      "name": "Forming Conclusions and Reporting",
+      "description": "Audit reports, opinions, conclusions"
+    }
+  ],
+
+  "domainPrompts": [
+    {
+      "examId": "AUD",
+      "domainId": "A",
+      "primaryPrompt": "Is this question asking if the auditor did the right thing?",
+      "secondaryHints": [
+        "Is this about ethics or independence?",
+        "Is professional judgment involved?"
+      ]
+    },
+    {
+      "examId": "AUD",
+      "domainId": "B",
+      "primaryPrompt": "Is this about risk or audit planning?",
+      "secondaryHints": [
+        "Is the auditor trying to understand the client?",
+        "Is this before testing begins?"
+      ]
+    },
+    {
+      "examId": "AUD",
+      "domainId": "C",
+      "primaryPrompt": "Is this about audit procedures or evidence?",
+      "secondaryHints": [
+        "Is the auditor testing or gathering evidence?",
+        "Is this about sampling or confirmations?"
+      ]
+    },
+    {
+      "examId": "AUD",
+      "domainId": "D",
+      "primaryPrompt": "Is this about the audit report or final conclusion?",
+      "secondaryHints": [
+        "Is an audit opinion involved?",
+        "Is this after audit work is done?"
+      ]
+    }
+  ],
+
+  "subdomains": [
+    {
+      "id": "A1",
+      "examId": "AUD",
+      "domainId": "A",
+      "name": "Independence and Threats",
+      "description": "Financial interests, relationships, safeguards",
+      "status": "active"
+    },
+    {
+      "id": "B1",
+      "examId": "AUD",
+      "domainId": "B",
+      "name": "Understanding the Entity and Internal Control",
+      "status": "active"
+    },
+    {
+      "id": "C1",
+      "examId": "AUD",
+      "domainId": "C",
+      "name": "Audit Evidence and Procedures",
+      "status": "active"
+    },
+    {
+      "id": "D1",
+      "examId": "AUD",
+      "domainId": "D",
+      "name": "Audit Reports and Opinions",
+      "status": "active"
+    }
+  ],
+
+  "rules": [
+    {
+      "id": "A1-R2",
+      "examId": "AUD",
+      "domainId": "A",
+      "subdomainId": "A1",
+      "anchor": "If the auditor gives investment advice to the plan, independence is impaired.",
+      "triggers": [
+        "investment advisor",
+        "employee benefit plan",
+        "DOL",
+        "independence"
+      ],
+      "pitfalls": [
+        "Not all extra services break independence",
+        "Advice is different from simple support"
+      ],
+      "confidence": "high",
+      "source": "UWorld MCQ-06117",
+      "notes": "DOL rules for employee benefit plans",
+      "status": "active"
+    }
+  ]
+}
