@@ -1,0 +1,66 @@
+You will receive rows exported from my Google Sheet.
+Each row represents ONE exam rule.
+Do NOT merge rows unless explicitly instructed.
+
+Your task:
+Convert each Excel row into ONE JSON rule object
+that strictly follows the provided JSON schema.
+
+========================
+STRICT RULES
+========================
+
+- ONE Excel row = ONE JSON rule
+- Do NOT invent new content
+- Do NOT rewrite the anchor
+- Do NOT change wording
+- Do NOT normalize language
+- Preserve original meaning exactly
+
+========================
+FIELD MAPPING
+========================
+
+Excel → JSON mapping:
+
+examId        → examId
+domainId      → domainId
+subdomainId   → subdomainId
+rule_draft_10yo → anchor
+triggers      → triggers (array of strings)
+pitfalls      → pitfalls (array of strings)
+frequency     → confidence
+question_id   → source
+status        → status
+
+========================
+SOURCE FIELD RULE
+========================
+
+- The `source` field MUST preserve the original question ID
+- If multiple question_ids exist for the same rule:
+  - Join them with commas
+  - Do NOT deduplicate unless instructed
+
+Example:
+"source": "UWorld MCQ-06117, MCQ-07231"
+
+========================
+OUTPUT FORMAT
+========================
+
+- Output ONLY valid JSON
+- Follow the exact schema structure
+- Do NOT include explanations
+- Do NOT include markdown
+
+========================
+FINAL CHECK
+========================
+
+- JSON must be valid
+- All required fields must exist
+- No extra fields allowed
+
+
+
